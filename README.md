@@ -38,7 +38,7 @@ NoMouse is a hands-free computer control system that allows you to navigate and 
    - macOS: Open `NoMouse.app`
    - Linux: Run `NoMouse` executable
 
-### From Source
+### Quick Start
 ```bash
 # Clone the repository
 git clone https://github.com/sh20raj/nomouse.git
@@ -46,20 +46,37 @@ git clone https://github.com/sh20raj/nomouse.git
 # Navigate to the project directory
 cd nomouse
 
-# Install dependencies
-pip install -r requirements.txt
+# Check if all required modules are available
+python3 test_imports.py
 
 # Run the application
-python app.py
+python3 run.py
 ```
 
-### Building from Source
+### Manual Installation
 ```bash
-# Install PyInstaller
-pip install pyinstaller
+# Install dependencies manually
+pip3 install -r requirements.txt
 
-# Build the application
-pyinstaller nomouse.spec
+# Run the application directly
+python3 app.py
+```
+
+### Advanced Installation (Optional)
+If you want to build a standalone application:
+
+1. Install PyInstaller:
+```bash
+pip3 install pyinstaller
+```
+
+2. Build the application:
+```bash
+# On macOS/Linux
+python3 -m PyInstaller nomouse.spec
+
+# On Windows
+python -m PyInstaller nomouse.spec
 ```
 
 ## Usage
